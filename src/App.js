@@ -1,7 +1,6 @@
 import './App.css';
 import 'antd/dist/antd.css';
-// import Button from './component/Button/Button';
-import Footer from './component/Layout/Layout';
+import Counter from './pages/Counter/counter';
 import BPCard from './pages/BPCard/BPCard';
 import Home from './pages/Home/Home';
 import AboutMe from './pages/AboutMe/AboutMe';
@@ -13,51 +12,48 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import NavBar from './component/Layout/Navbar';
+import NavBar from './component/Navbar/Navbar';
 
 
 function App() {
   return (
     <>
-    <Router>
-    <NavBar/>
+      <Router>
+        <NavBar/>
+        <div className="App">
+          <Switch>
 
-    {/* Ini Class App */}
-    <div className="App">
-      
-      {/* Ini Route Home */}
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
 
-        {/* Ini Route BPCard  */}
-        <Route path="/BPCard">
-          <BPCard />
-        </Route>
+            <Route path="/bpcard">
+              <BPCard />
+            </Route>
 
-        {/* Ini Route AboutMe  */}
-        <Route path="/AboutMe">
-          <AboutMe />
-        </Route>
+            <Route path="/aboutMe">
+              <AboutMe />
+            </Route>
 
-        <Route path="/Contribute">
-          <Contribute />
-        </Route>
-        
-        {/* Ini Route Books  */}
-        <Route path="/Books">
-          <Books />
-        </Route>
+            <Route path="/contribute">
+              <Contribute />
+            </Route>
+            
+            <Route path="/books">
+              <Books />
+            </Route>
 
-        <Route path="/Contributor_detail">
-          <ContributorDetail />
-        </Route>
+            <Route path="/contributor-detail/:id">
+              <ContributorDetail />
+            </Route>
 
-      </Switch>
-      <Footer />
-    </div>
-    </Router>
+            <Route path="/counter">
+              <Counter />
+            </Route>
+
+          </Switch>
+        </div>
+      </Router>
     </>
   );
 };

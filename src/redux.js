@@ -18,7 +18,7 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         usia: state.usia + 10,
         }
-    } else if (action.type === TAMBAH_NILAI){
+    } else if (action.type === TAMBAH_NILAI) {
         return {
         ...state,
         nilai: state.nilai + action.payload

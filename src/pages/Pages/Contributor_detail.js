@@ -5,7 +5,7 @@ import {USER_API} from "../utility/constant";
 import {Button} from 'antd';
 
 const ContributorDetail = () => {
-    const [user, setPerson] = useState([]);
+    const [person, setPerson] = useState([]);
     const [total, setTotal] = useState(0);
     const {id} = useParams();
 
@@ -24,17 +24,18 @@ const ContributorDetail = () => {
         getTotal();
     },[id]);
    
-    const prevID = user.id === 1 ? total : user.id -1;
-    const nextID = user.id === total ? user.id : user.id +1;  
+    const prevID = person.id === 1 ? total : person.id -1;
+    const nextID = person.id === total ? person.id : person.id +1;  
 
         return (
             <>
+             <div>
                 <p>Contributor Detail</p>
-                <div>
-                    <img src={user.avatar} alt='avatar'/>
-                </div>
-                <p>{user.first_name} {user.last_name}</p>
-                <p>{user.email}</p>
+               
+                    <img src={person.avatar} alt='avatar'/>
+                
+                <p>{person.first_name} {person.last_name}</p>
+                <p>{person.email}</p>
                 <Button>
                 <Link to={`./${nextID}`}>
                     <p>NEXT</p>
@@ -45,6 +46,7 @@ const ContributorDetail = () => {
                     <p>PREV</p>
                 </Link>
                 </Button>
+                </div>
             </>
         )
 }

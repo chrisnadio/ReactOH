@@ -48,10 +48,7 @@
   }
   
   /* Column container */
-  .row {  
-    display: flex;
-    flex-wrap: wrap;
-  }
+
   
   /* Create two unequal columns that sits next to each other */
   /* Sidebar/left column */
@@ -60,18 +57,20 @@
     background-color: #76e6ee;
     padding: 10px;
     position: relative;
+    text-align: center;
   }
   
   /* foto */
   .fotoprofil {
-    height: 350px; 
-    width: 240px;
+    height: 100%; 
+    width: 5px;
   }
   
   /* Main column */
   .main {
-    flex: 70%;
+    flex: 100%;
     padding: 20px;
+    position: relative;
   }
   
   .archive {
@@ -126,26 +125,15 @@
     text-align: center;
   }
   
-  .button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    display: inline-block;
-    font-size: 12px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 20px;
-  }
-  
   .infooter {
     font-family: Times New Roman;
     padding: 20px 20px 10px 10px;
     text-align: right;
-    color:rgb(255, 255, 255);
+    color:rgb(7, 7, 7);
   }
   
   /* Responsive layout for Tablet */
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1450px) {
     .row, .navbar {   
       flex-direction: row;
     }

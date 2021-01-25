@@ -1,10 +1,15 @@
-import React from 'react';
-// // import Pesan from './Pesan';
+import React from "react";
+import '../../assets/css/home.css';
 
 const Home = () => {
+    // const [isOpen, setisOpen] = useState(false);
 
     return (
-        <p>This is Home Page</p>
+        <>
+            <div  className='home'>
+                <p className='welcome'>Dio Website</p>
+            </div>
+        </>
     )
 }
 

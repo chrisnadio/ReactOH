@@ -1,31 +1,38 @@
 import React from 'react';
+import foto from '../../assets/images/myfoto.JPG';
+import cahaya from '../../assets/images/cahaya.jpg';
+import garansi from '../../assets/images/garansi3.jpeg';
+import mvp from '../../assets/images/mvp.png';
+import topbrand from '../../assets/images/topbrand.jpeg';
+import iso from '../../assets/images/iso.jpeg';
 import '../../assets/css/aboutme.css';
+import {Button} from 'antd';
 
 const AboutMe = () => {
     return (
-<div>
-    <div ClassName="top">
-        <h2>Curriculum Vitae</h2>
-    </div>
+    <>
+        <div ClassName="top">
+            <h2>Curriculum Vitae</h2>
+        </div>
 
-    <div ClassName="header">
-        {/* <img src="D:\Dio\Glints\Project Pribadi\Biodata\images\cahaya.jpg" style="width:1350px;height:400px;"> */}
-    </div>
+        <div ClassName="header">
+            <img src={cahaya} id='cahaya' alt='cahaya'/>
+        </div>
 
-    <div className="navbar">
-        {/* <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
-        <a href="#">GitLab</a>
-        <a href="#">Twitter</a> */}
-    </div>
+        <div className="navbar">
+            <a href="https://www.linkedin.com/in/fabianus-chrisna-dio-040a47192/?originalSubdomain=id">LinkedIn</a>
+            <a href="https://github.com/chrisnadio">GitHub</a>
+            <a href="https://gitlab.com/chrisnadio">GitLab</a>
+            <a href="https://twitter.com/12FC_Dio">Twitter</a>
+        </div>
 
-    <div className="row">
+   
         <div className="side">
                 <h1>F Chrisna Dio</h1>
                 <h2>Address:</h2>
                 <p>Street Raya Bogor Km.24. Pasar Rebo, East Jakarta</p>
             <div ClassName="fotoprofil">
-                {/* <img src="D:\Dio\Glints\Project Pribadi\Biodata\images\myfoto.jpg"> */}
+                <img src={foto} id='foto' alt='foto'/>
             </div>
         </div>
 
@@ -33,44 +40,36 @@ const AboutMe = () => {
             <div ClassName="main-skills">
                     <h2>Skills</h2>
                 <div ClassName="paragraf">
-                    <p>HTML5</p>
-                    <p>CSS3</p>
-                    <p>JavaScript</p>
-                    <p>Git</p>
-                    <p>SDLC</p>
+                    <p>HTML5, CSS3, JavaScript, Git, ReactJS</p>
                 </div>
             </div>
     
-    <div ClassName="main-archive">     
-            <h2>Archivement</h2>
-        <div ClassName="container">
-            <div ClassName="icon-archive">
-                {/* <img src="D:\Dio\Glints\Project Pribadi\Biodata\images\mvp.png" style="width:180px; height:170px;">      
-                <img src="D:\Dio\Glints\Project Pribadi\Biodata\images\garansi3.jpeg" style="width:175px;  height:170px;">   
-                <img src="D:\Dio\Glints\Project Pribadi\Biodata\images\topbrand.jpeg" style="width:175px; height:170px;"> 
-                <img src="D:\Dio\Glints\Project Pribadi\Biodata\images\iso.jpeg" style="width:183px; height:170px;"> */}
+            <div ClassName="main-archive">     
+                <h2>Archivement</h2>
+                    <div ClassName="container">
+                        <div ClassName="icon-archive">
+                            <img src={mvp} id='foto' alt='foto'/>      
+                            <img src={garansi} id='foto' alt='foto'/>   
+                            <img src={topbrand} id='foto' alt='foto'/> 
+                            <img src={iso} id='foto' alt='foto'/>
+                        </div>
+                    </div>       
             </div>
-        </div>       
-    </div>
 
-    <div ClassName="main-hobby">
-        <h2>Hobby</h2>
-        {/* <p style="height:200px;">Under Maintenance</p> */}
-    </div>
-  </div>
-  </div>
+             <div ClassName="main-hobby">
+                <h2>Hobby</h2>
+                <p>Travelling</p>
+            </div>
+        </div>
 
 
-<div ClassName="footer">
-    <button ClassName="button">HIRE ME!</button>
-  <div ClassName="infooter">
-        <h2>@Copyright 2020</h2>
-        <h3>F Chrisna Dio</h3>
-  </div>
-</div>
-</div>
-
-
+        <div ClassName="footer">
+            <Button>HIRE ME!</Button>
+                <div ClassName="infooter">
+                    <h2>@Copyright 2020. F Chrisna Dio</h2>
+                </div>
+        </div>
+    </>
     );
 };
 

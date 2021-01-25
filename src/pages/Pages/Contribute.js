@@ -27,7 +27,7 @@ return (
                 <img src={user.avatar} alt='avatar' />
                 <p>{user.first_name} {user.last_name}</p>
                 <p>{user.email}</p>
-                <Link to={`/contributor_detail/${user.id}`}>
+                <Link to={`/contributor-detail/${user.id}`}>
                 <Button type="primary">More Detail</Button>  
                 </Link>
             </li>
